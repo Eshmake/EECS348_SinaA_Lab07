@@ -93,7 +93,7 @@ Matrix Matrix::operator*(const Matrix& other) const {
   return prodMat;
 }
 
-//matrix-data.txt
+
 int Matrix::sumOfDiagonals() const{
   int* mainDiag = new int;
   int* secDiag = new int;
@@ -104,8 +104,9 @@ int Matrix::sumOfDiagonals() const{
       if(i == j){
         *mainDiag += data[i][j];}
 
-      if(j == SIZE-i){
+      if(j == (SIZE-1)-i){
         *secDiag += data[i][j];}
+
     }
   }
 
